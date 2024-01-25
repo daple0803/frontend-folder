@@ -9,6 +9,7 @@ import {
     inputOptions,
     formHeading,
     formStyling as styles,
+    defaultContainer,
 } from "../styles/styles"
 import { Button, TextInput } from "react-native-paper"
 import Footer from "../components/Footer"
@@ -27,12 +28,11 @@ const Login = ({ navigation }) => {
 
     return (
         <>
-            <View style={defaultStyles}>
-                <View style={styles.headingContainer}>
-                    <Text style={formHeading}>Đăng nhập</Text>
-                </View>
-
+            <View style={defaultContainer}>
                 <View style={styles.container}>
+                <View style={styles.headingContainer}>
+                    <Text style={[formHeading, {backgroundColor: colors.color3}]}>Đăng nhập</Text>
+                </View>
                     <TextInput
                         {...inputOptions}
                         placeholder="Email"

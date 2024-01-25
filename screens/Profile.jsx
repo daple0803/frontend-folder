@@ -82,7 +82,6 @@ const Profile = ({ navigation, route }) => {
                 <View style={{ marginBottom: 20 }}>
                     <Text style={formHeading}>Trang cá nhân</Text>
                 </View>
-
                 {loading ? (
                     <Loader />
                 ) : (

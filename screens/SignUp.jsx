@@ -8,6 +8,7 @@ import {
     inputOptions,
     defaultImg,
     formStyling as styles,
+    defaultContainer,
 } from "../styles/styles"
 import { Avatar, Button, TextInput } from "react-native-paper"
 import Footer from "../components/Footer"
@@ -65,11 +66,7 @@ const SignUp = ({ navigation, route }) => {
 
     return (
         <>
-            <View style={defaultStyles}>
-                <View style={styles.headingContainer}>
-                    <Text style={formHeading}>Đăng kí tài khoản</Text>
-                </View>
-
+            <View style={defaultContainer}>
                 <ScrollView
                     showsVerticalScrollIndicator={false}
                     style={{
@@ -83,7 +80,8 @@ const SignUp = ({ navigation, route }) => {
                         style={{
                             minHeight: 900,
                         }}
-                    >
+                    > 
+                    <Text style={[formHeading, {backgroundColor: colors.color3}]}>Đăng nhập</Text>
                         <Avatar.Image
                             style={{
                                 alignSelf: "center",

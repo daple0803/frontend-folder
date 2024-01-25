@@ -3,6 +3,7 @@ import React, { useState } from "react"
 
 import {
     colors,
+    defaultContainer,
     defaultStyles,
     formHeading,
     inputOptions,
@@ -25,12 +26,11 @@ const ForgetPassword = ({ navigation }) => {
 
     return (
         <>
-            <View style={defaultStyles}>
-                <View style={styles.headingContainer}>
-                    <Text style={formHeading}>Quên mật khẩu</Text>
-                </View>
-
+            <View style={defaultContainer}>
                 <View style={styles.container}>
+                    <View style={styles.headingContainer}>
+                        <Text style={[formHeading, {backgroundColor: colors.color3}]}>Quên mật khẩu</Text>
+                    </View>
                     <TextInput
                         {...inputOptions}
                         placeholder="Email"

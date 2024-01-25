@@ -65,16 +65,27 @@ const ProductCard = ({
                         {name}
                     </Text>
 
-                    <Text
+                    {stock === 0 ? (
+                        <Text
                         numberOfLines={2}
                         style={{
                             color: i % 2 === 0 ? colors.color2 : colors.color3,
                             fontSize: 20,
-                            fontWeight: "700",
+                            fontWeight: "500",
                         }}
                     >
-                        {price} ₫
+                       SOLD OUT
                     </Text>
+                    ): <Text
+                    numberOfLines={2}
+                    style={{
+                        color: i % 2 === 0 ? colors.color2 : colors.color3,
+                        fontSize: 20,
+                        fontWeight: "700",
+                    }}
+                >
+                    {price} ₫
+                </Text>}
                 </View>
 
                 <TouchableOpacity

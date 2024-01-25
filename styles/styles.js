@@ -1,9 +1,9 @@
 import { StyleSheet, Platform, StatusBar } from "react-native"
 
 export const colors = {
-    color1: "#c70049",
-    color1_light: "#ff4a63",
-    color1_light2: "#c70049cc",
+    color1: "#df4f4f",
+    color1_light: "#b82e41",
+    color1_light2: "#bc6464",
     color2: "#fff",
     color3: "#2d2d2d",
     color4: "transparent",
@@ -13,14 +13,21 @@ export const colors = {
 }
 
 export const defaultStyles = StyleSheet.create({
-    padding: 35,
+    padding: 30,
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    flex: 1,
+    backgroundColor: colors.color2,
+})
+
+
+export const defaultContainer = StyleSheet.create({
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     flex: 1,
     backgroundColor: colors.color2,
 })
 
 export const inputStyling = StyleSheet.create({
-    height: 45,
+    height: 40,
     backgroundColor: colors.color2,
     marginVertical: 10,
     marginHorizontal: 20,

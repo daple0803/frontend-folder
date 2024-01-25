@@ -1,15 +1,15 @@
 import { View, TouchableOpacity } from "react-native"
 import React from "react"
-import { useNavigation } from "@react-navigation/native"
+import { useNavigation, useRoute } from "@react-navigation/native"
 import { colors } from "../styles/styles"
 import { Avatar } from "react-native-paper"
 import { useSelector } from "react-redux"
 
 const Footer = ({ activeRoute = "home" }) => {
     const navigate = useNavigation()
-
+    const route = useRoute()
     const { loading, isAuthenticated } = useSelector((state) => state.user)
-
+    
     const avatarOptions = {
         color: colors.color2,
         size: 50,
@@ -91,16 +91,18 @@ const Footer = ({ activeRoute = "home" }) => {
                         width: 80,
                         height: 80,
                         backgroundColor: colors.color2,
+                        borderWidth: 1,
+                        borderColor: route.name === "profile"  ? colors.color1 : colors.color2,
                         borderRadius: 100,
                         justifyContent: "center",
                         alignItems: "center",
                         top: -50,
                         alignSelf: "center",
+                        elevation: 5
                     }}
                 >
                     <View
                         style={{
-                            borderRadius: 100,
                             justifyContent: "center",
                             alignItems: "center",
                         }}

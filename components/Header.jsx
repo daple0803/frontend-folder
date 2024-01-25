@@ -33,7 +33,7 @@ const Header = ({ back, emptyCart = false }) => {
                         }}
                         icon={"arrow-left"}
                         color={
-                            route.name == "productdetails"
+                            route.name === "productdetails" || route.name === "changepassword"
                                 ? colors.color2
                                 : colors.color3
                         }

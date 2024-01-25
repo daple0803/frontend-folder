@@ -9,6 +9,7 @@ import {
     inputOptions,
     formHeading,
     formStyling as styles,
+    defaultContainer,
 } from "../styles/styles"
 import { Button, TextInput } from "react-native-paper"
 import Header from "../components/Header"
@@ -29,13 +30,12 @@ const ChangePassword = () => {
     }
 
     return (
-        <View style={defaultStyles}>
+        <View style={defaultContainer}>
             <Header back={true} />
-            <View style={{ marginBottom: 20, paddingTop: 70 }}>
-                <Text style={formHeading}>Thay đổi mật khẩu</Text>
-            </View>
-
             <View style={styles.container}>
+                <View style={styles.headingContainer}>
+                    <Text style={[formHeading, {backgroundColor: colors.color3}]}>Thay đổi mật khẩu</Text>
+                </View>
                 <TextInput
                     {...inputOptions}
                     placeholder="Mật khẩu cũ"
