@@ -4,7 +4,7 @@ export const colors = {
     color1: "#c70049",
     color1_light: "#ff4a63",
     color1_light2: "#c70049cc",
-    color2: "white",
+    color2: "#fff",
     color3: "#2d2d2d",
     color4: "transparent",
     color5: "#f2f2f2",
