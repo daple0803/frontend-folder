@@ -78,10 +78,11 @@ const SignUp = ({ navigation, route }) => {
                 >
                     <View
                         style={{
-                            minHeight: 900,
+                            minHeight: 1000,
+                            paddingTop: 30
                         }}
                     > 
-                    <Text style={[formHeading, {backgroundColor: colors.color3}]}>Đăng nhập</Text>
+                    <Text style={[formHeading, {backgroundColor: colors.color3}]}>Đăng kí</Text>
                         <Avatar.Image
                             style={{
                                 alignSelf: "center",

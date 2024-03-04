@@ -1,4 +1,4 @@
-import { TouchableOpacity } from "react-native"
+import { TouchableOpacity, View } from "react-native"
 import React from "react"
 import { Avatar } from "react-native-paper"
 import { colors } from "../styles/styles"
@@ -65,6 +65,7 @@ const Header = ({ back, emptyCart = false }) => {
                     }
                 />
             </TouchableOpacity>
+            <View style={{marginBottom: 30}}></View>
         </>
     )
 }
